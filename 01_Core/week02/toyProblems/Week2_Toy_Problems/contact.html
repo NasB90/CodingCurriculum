@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Info</title>
+        <link href="styles.css" rel ="stylesheet">
+    </head>
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shoes.html">About</a></li>
+
+                <ul class ="dropdown">
+                    <div class="dropdown">
+                        <button class="dropbtn"><a href="gallery.html">Gallery</a></button>
+                        <div class="dropdown-content">
+
+                    <li><a href= "red_shoes.html" id="red"> Red </a></li>
+                    <li><a href= "orange_shoes.html" id="orange"> Orange </a></li>
+                    <li><a href= "yellow_shoes.html" id="yellow"> Yellow </a></li>
+                    <li><a href= "green_shoes.html" id="green"> Green </a></li>
+                    <li><a href= "blue_shoes.html" id="blue"> Blue</a></li>
+                    <li><a href= "indigo_shoes.html" id="indigo"> Indigo </a></li>
+                    <li><a href= "violet_shoes.html" id="violet"> Violet </a></li>
+                    
+                </ul>
+            </li>
+        
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul> 
+        </nav>
+
+
+    <div id="container">
+        <form>
+
+            <fieldset>
+                <legend>Contact Info</legend>
+
+                <label for="fname">First Name:</label> 
+                <input type="text" placeholder="ie: 'John'" id="fname">
+
+                <label for="lname">Last Name:</label>  
+                <input type="text" placeholder="ie: 'Smith'" id="lname">
+                
+                <br><br>
+
+                Gender:<br>
+                <input type="radio" name="gender"> Male <br>
+                <input type="radio" name="gender"> Female 
+                
+                <br><br>
+
+                <label for="sport">Favorite Sport:</label>  <br>
+                <select id="sport">
+                    <option></option>
+                    <option>Basketball</option>
+                    <option>Football</option>
+                    <option>Tennis</option>
+                    <option>Lacrosse</option>
+                    <option>Gymnastics</option>
+                </select>
+            
+                <br><br>
+
+                Favorite Pizza Toppings:<br>
+                <input type="checkbox"> Pepperoni
+                <input type="checkbox"> Mushrooms 
+                <input type="checkbox"> Peppers
+                <input type="checkbox"> Sausage 
+                <input type="checkbox"> Pineapple
+                
+
+                <br><br>
+
+                <input type="submit" value="Save">
+                <input type="reset" value="Start Over">
+
+            </fieldset>
+        </form>
+    </div>
+    <footer> &copy; 2020 Nas B.</footer>
+    </body>
+</html>
