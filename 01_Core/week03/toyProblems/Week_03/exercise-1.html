@@ -1,0 +1,45 @@
+<!doctype html>
+
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+
+   <title>CSS Exercise 1</title>
+   <meta name="description" content="ITA CSS Layout Exercise">
+   <meta name="author" content="Nastassja Bulger">
+   <!--<link href="style.css" rel="stylesheet">-->
+
+   <style>
+
+ 	 .container {
+ 		display: grid;
+ 		grid-template-columns: 100px 100px;
+ 		grid-template-rows: 100px 100px;
+ 		grid-gap: 20px;
+}
+
+ 	  .div1, .div2, .div3, .div4 {
+ 		  background-color: blue;
+}
+
+ 	  .div5 {
+ 		height: 100px;
+ 		width: 100px;
+ 		background-color: red;
+ 		transform: translate(65px, -180px);
+}
+
+
+   </style>
+ </head>
+ <body>
+ 	<!-- Do not touch the HTML please -->
+ 	<div class="container">
+ 		<div class="interior div1"></div>
+ 		<div class="interior div2"></div>
+ 		<div class="interior div3"></div>
+ 		<div class="interior div4"></div>
+ 		<div class="interior div5"></div>
+ 	</div>
+ </body>
+ </html> 

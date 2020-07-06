@@ -1,0 +1,101 @@
+<!doctype html>
+
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+
+   <title>CSS Exercise 5</title>
+   <meta name="description" content="ITA CSS Layout Exercise">
+   <meta name="author" content="Nastassja Bulger">
+
+   <style>
+
+ 	.container {
+       width: 800px;
+       height: 100px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+}
+
+     .interior{
+       width: 200px;
+       height: 200px;
+       border-style: solid;
+       border-width: 10px;
+       border-color: white;
+}
+
+ 	.div1{
+       background-color: red;
+}
+
+ 	.div2{
+       background-color: orange;
+}
+
+ 	.div3{
+       background-color: yellow;
+}
+
+ 	.div4{
+       background-color: blue;
+}
+
+     .div5 {
+       background-color: violet;
+}
+
+     .div5, .div4 {
+       transform: translateY(-100px);
+       margin: 0 5px;
+}
+
+
+ /*.container{
+       width: 600px;
+       height: 600px;
+     }
+
+ 	.interior{
+       width: 200px;
+       height: 200px;
+       border-style: solid;
+       border-width: 10px;
+       border-color: white;
+ 	}
+ 	
+ 	.div1{
+       background-color: red;
+ 	}
+ 	
+ 	.div2{
+       background-color: orange;
+ 	}
+ 	
+ 	.div3{
+       background-color: yellow;
+ 	}
+
+ 	.div4{
+       background-color: blue;
+     }
+ 	
+     .div5 {
+       background-color: violet;
+     }*/
+
+   </style>
+ </head>
+ <body>
+ 	<!-- Do not touch the HTML please -->
+ 	<div class="container">
+ 		<div class="interior div1"></div>
+ 		<div class="interior div2"></div>
+ 		<div class="interior div3"></div>
+ 		<div class="interior div4"></div>
+ 		<div class="interior div5"></div>
+ 	</div>
+ </body>
+ </html> 
