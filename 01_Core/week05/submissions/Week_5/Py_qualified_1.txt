@@ -1,0 +1,129 @@
+CHALLENGE #1:
+
+# Assign an integer to this variable. 
+num_of_candy = 10
+
+# Assign a float to this variable. 
+total_cost = 1.39
+
+# Using the previous variables, find the cost per candy. 
+cost_per_candy = total_cost / num_of_candy
+
+
+
+CHALLENGE #2:
+
+secrete = "yedsntaac"
+
+# Write the code that will reverse the string here. 
+message = secrete[::-2]
+
+CHALLENGE #3:
+
+pets = ["dog", "hamster", "cheese", "bunny"]
+
+# Your code here to remove "cheese" & add "cat"
+
+pets.pop(2)
+
+pets.append('cat')
+
+
+CHALLENGE #4:
+
+escalator_msg = "We Belive in Running Up Escalators. We capitalize on momentum. We know that the world is changing quickly and we act deliberately and urgently, like we’re running out of time. We value constant innovation and have a bias to action in order to get important things done."
+
+# Using the build in methods find how many words are in the escalator_msg
+# Your code Here:
+escalator_msg = "We Belive in Running Up Escalators. We capitalize on momentum. We know that the world is changing quickly and we act deliberately and urgently, like we’re running out of time. We value constant innovation and have a bias to action in order to get important things done.".split()
+word_count = len(escalator_msg) 
+
+CHALLENGE #5:
+
+escalator_msg = "We Belive in Running Up Escalators. We capitalize on momentum. We know that the world is changing quickly and we act deliberately and urgently, like we’re running out of time. We value constant innovation and have a bias to action in order to get important things done."
+
+# Using the build in methods find how many words are in the escalator_msg
+# Your code Here:
+escalator_msg = "We Belive in Running Up Escalators. We capitalize on momentum. We know that the world is changing quickly and we act deliberately and urgently, like we’re running out of time. We value constant innovation and have a bias to action in order to get important things done."
+
+# Assign the number of unique words in here using build in methods. 
+words = escalator_msg.lower()
+word_count = len(words.split())
+num_of_words = len(set(words.split()))
+
+CHALLENGE #6:
+
+def can_buy(product, price):
+	# Product is the name of the product.
+	# Price is a float OR int for the price of the item. 
+	# Your code in here. 
+ 
+    left_over = 20 - price
+    amount_over = left_over * -1
+  
+    if price <= 20:
+      print(f'You can afford {product}, you will spend ${price:.2f} and have ${left_over:.2f} left over.')
+    else:
+      print(f'You cannot afford a {product} at the time, it is ${amount_over:.2f} over your budget.')
+
+CHALLENGE #7:
+
+def even_nums(numbers, even_numbers):
+	# numbers is the list of all numbers
+	# even_numbers is the empty list, that holds only the even numbers. 
+	# Your code in here. 
+    
+    
+    for number in numbers:
+       if number % 2 == 0:
+          even_numbers.append(number)
+
+CHALLENGE #8:
+
+# initialized variable candy
+candy = "Chocolate"
+
+
+  
+
+# Make the function new_candy(candy_name)
+def new_candy(candy_name = "Candy cane"):
+    global candy 
+    candy = candy_name.capitalize()
+
+CHALLENGE #9:
+
+def file_to_string(file_name):
+	#Your code here
+    file = open(file_name)
+    string = file.read()
+    file.close()
+    return string
+def string_to_list(string):
+	# Your code here
+	grade_list = string.split()
+    grade_list = [(grade_list[i], int(grade_list[i+1])) for i in range(0,len(grade_list),2)]
+    return grade_list 
+
+def final_grade(grade_list):
+	# Your code here
+	
+    grade_list = [lis[1] for lis in grade_list]
+    quizzes = []
+    quizzes.append(grade_list[0:4])
+    quizzes = sum(quizzes[0])/4
+    quizzes = (quizzes * .10)
+    tests = []
+    tests.append(grade_list[4:8])
+    tests = sum(tests[0])/4
+    tests = (tests * .40)
+    midterm = []
+    midterm.append(grade_list[8])
+    midterm = (midterm[0] * .25)
+    final = []
+    final.append(grade_list[9])
+    final = (final[0] * .25)
+    grades = quizzes + tests + midterm + final
+    return grades
+
+

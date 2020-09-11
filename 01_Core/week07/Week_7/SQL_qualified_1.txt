@@ -1,0 +1,38 @@
+CHALLENGE #1:
+
+CREATE TABLE employees
+  (
+  employee_id serial,
+  last_name VARCHAR(255),
+  first_name VARCHAR(255)
+  );
+  
+  INSERT INTO employees (last_name, first_name)
+  VALUES ('Bulger', 'Nastassja');
+  
+  SELECT * FROM employees;
+
+CHALLENGE #2:
+
+SELECT name, concat_WS('-',month,day) AS birthday FROM students ORDER BY month,day;
+
+CHALLENGE #3:
+
+SELECT name,address FROM customers WHERE address LIKE '%Apt.%';
+
+CHALLENGE #4:
+
+SELECT COUNT(DISTINCT customer_id) AS "unique_customers" FROM transactions;
+
+CHALLENGE #5:
+
+SELECT age,COUNT(*) AS cat_count FROM cats GROUP BY age ORDER BY age ASC;
+
+CHALLENGE #6:
+
+SELECT student_id, MAX(score) AS highest_score FROM scores GROUP BY student_id;
+
+CHALLENGE #7:
+
+SELECT customer_id AS customer,sum(price) AS total FROM transactions group by customer_id ORDER BY total DESC LIMIT 10;
+
