@@ -1,0 +1,65 @@
+CHALLENGE #1:
+
+class Candy:
+
+  def __init__(self, name, cost):
+    self.name = name 
+    self.cost = cost
+    
+  def __repr__(self): 
+    return ("A " + self.name + " costs" + " $" + str(self.cost)) 
+    
+  def total_cost(self, num):
+    total = self.cost * num
+    print(str(num) + " " + self.name + "s at " + '{:.2f}'.format(self.cost) + " will cost " + '{:.2f}'.format(total))
+  
+c = Candy("Chocolate", 0.5)
+print(c.total_cost(4))
+print(c)
+
+
+def concatenate(str1, str2):
+  try:
+    print(str1 +" "+ str2)
+  except:
+    print("Houston, we have a problem") 
+    return ""
+
+def __init__(self, name, cost):
+       self.name = name
+       self.cost = cost
+
+   def get_name(self):
+       return self.name
+
+   def get_cost(self):
+       return self.cost
+
+   def set_name(self, name):
+       self.name= name
+
+   def set_cost(self, cost):
+       self.cost = cost
+
+   def total_cost(self, num):
+       total = self.cost * num
+       print(f"{num} {self.name}s at {self.cost} will cost {total}.")
+
+   def show(self):
+       print(f"A {self.name} costs ${self.cost}")
+
+   def sales_tax(self, mylist):
+       return[num * 0.06 for num in mylist]
+
+   def under_twenty(self, mylist):
+       filterList = filter(lambda x: x < 20, mylist)
+       return list(filterList)
+
+   def dec_to_binary(self, mylist):
+       mapList = map(lambda x: bin(x), mylist)
+       return list(mapList)
+
+   def average(self, nums):
+       total = sum(nums)
+       mean = total / len(nums)
+       return mean

@@ -1,0 +1,52 @@
+CHALLENGE #1:
+
+CREATE TABLE relocations
+
+(relocation_id serial NOT NULL,
+  last_name VARCHAR(255),
+  first_name VARCHAR(255),
+  from_state CHAR(2),
+  to_state CHAR(2),
+  total_cost DECIMAL(7,2),
+  request_date TIMESTAMP DEFAULT NOW(),
+  PRIMARY KEY (relocation_id)
+);
+
+INSERT INTO relocations(last_name, first_name, from_state, to_state, total_cost)
+VALUES('Bulger', 'Nastassja', 'NY', 'NC',999.98);
+
+
+CHALLENGE #2:
+
+SELECT name, quantity,
+    CASE 
+        WHEN quantity < 10 THEN 'order more'
+        WHEN quantity > 30 THEN 'put on sale'
+        ELSE 'none'
+    END AS action
+FROM candies;
+
+CHALLENGE #3:
+
+SELECT name,count(enrollments.enrollment_id) AS number_of_classes
+FROM enrollments 
+LEFT JOIN students ON students.id = enrollments.student_id GROUP BY students.name
+order by 2 desc, 1 asc
+;
+
+CHALLENGE #4:
+
+SELECT name, course 
+FROM students left join enrollments ON students.id = enrollments.student_id ORDER BY name; 
+
+
+CHALLENGE #5:
+
+SELECT 
+     students.name as "student"
+,    courses.name as "course"
+FROM students 
+JOIN enrollments ON students.id = enrollments.student_id
+JOIN courses ON enrollments.course_id = courses.id
+where courses.instructor = 'Mr. Kroh'
+;
