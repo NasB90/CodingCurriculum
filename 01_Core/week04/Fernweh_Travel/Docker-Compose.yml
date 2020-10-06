@@ -1,0 +1,56 @@
+version: '3.7'
+services: 
+    database:
+        #give container a specific name to allow errors to be easily found
+        container_name: db-sql
+        #build the dockerfile in the folder database
+        build:
+            context: ./Database
+        #table & credentials for sql
+        environment:
+            MYSQL_DATABASE: fernweh
+            MYSQL_ROOT_PASSWORD: Supersecret1
+        #map the mysql port (local:sql driver)
+        ports:
+            - "3000:3306"
+        #connects to backend
+        networks:
+            - backend
+    app:
+        #give a name for reference
+        container_name: go-app
+        #build dockerfile in folder back_end
+        build:
+            context: ./app
+        #run on port 8000
+        ports:
+            - "8000:8000"
+        #connects to backend
+        networks:
+            - backend
+            - frontend
+        #database needs to be good to go before running back_end
+        depends_on: 
+            - database
+    frontend:
+        #build dockerfile in folder front_end
+        build:
+            context: ./frontend
+        #give a name for reference
+        container_name: front-end-website
+        #map the ports exposed in the container by the NGINX image (port 80) to the specified port 
+        ports:
+            - "9090:80"
+        #connected to backend
+        networks:
+            - frontend
+            - backend
+        #database and back_end need to be good before running front_end
+        depends_on: 
+            - database
+            - app
+        
+#defining the network backend to connect all 3 
+networks:
+    backend:
+    frontend:
